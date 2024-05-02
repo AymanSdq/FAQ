@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (call_icons.src.endsWith('icon-plus.svg')) {
                 allCallIcons.forEach(icon => {
-                    icon.src = '/assets/images/icon-plus.svg';
+                    icon.src = 'assets/images/icon-plus.svg';
                 });
-                call_icons.src = '/assets/images/icon-minus.svg';
+                call_icons.src = 'assets/images/icon-minus.svg';
             } 
 
             if(answerFaq.classList.contains("hideAnswer")){
