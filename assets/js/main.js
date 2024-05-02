@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     var openFAQ = document.querySelectorAll('.ques-click');
-    var allCallIcons = document.querySelectorAll(".icon_showhide")
+    var allCallIcons = document.querySelectorAll(".icon_showhide");
+    var allAsnwerFaq = document.querySelectorAll(".asnwerfaq");
 
 
     // Add a click event listener to it
@@ -12,18 +13,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
             var call_icons = faq_quest.querySelector(".icon_showhide");
 
-            var asnwerfaq = faq_quest.querySelector(".asnwerfaq");
+            var answerFaq = faq_quest.querySelector(".asnwerfaq");
+
+            console.log(answerFaq);
 
             if (call_icons.src.endsWith('icon-plus.svg')) {
                 allCallIcons.forEach(icon => {
                     icon.src = '/assets/images/icon-plus.svg';
                 });
                 call_icons.src = '/assets/images/icon-minus.svg';
-            } else if (call_icons.src.endsWith('icon-minus.svg')) {
-                allCallIcons.forEach(icon => {
-                    icon.src = '/assets/images/icon-plus.svg';
+            } 
+
+            if(answerFaq.classList.contains("hideAnswer")){
+                allAsnwerFaq.forEach(answer => {
+                    answer.classList.replace("showAnswer", "hideAnswer")
                 });
-                call_icons.src = '/assets/images/icon-plus.svg';
+                answerFaq.classList.replace("hideAnswer", "showAnswer")
             }
             
 
