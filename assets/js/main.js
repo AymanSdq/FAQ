@@ -15,8 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             var answerFaq = faq_quest.querySelector(".asnwerfaq");
 
-            console.log(answerFaq);
-
             if (call_icons.src.endsWith('icon-plus.svg')) {
                 allCallIcons.forEach(icon => {
                     icon.src = '/assets/images/icon-plus.svg';
@@ -30,13 +28,34 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 answerFaq.classList.replace("hideAnswer", "showAnswer")
             }
-            
-
-
 
         })
 
+        document.addEventListener('keydown', function(event) {
+            // Check if the pressed key is "1" (keyCode 49)
+            if (event.keyCode === 49) {
+                var firstQuestion = document.getElementById("first-question");
+                firstQuestion.click();
+            }else if(event.keyCode === 50){
+                var secondQuestion = document.getElementById("second-question");
+                secondQuestion.click();
+            }else if(event.keyCode === 51){
+                var thirdQuestion = document.getElementById("third-question");
+                thirdQuestion.click();
+            }else if(event.keyCode === 52){
+                var fourthQuestion = document.getElementById("fourth-question");
+                fourthQuestion.click();
+            }
+        });
+
+
     });
+
+
+
+    
+    
+
 
 
 });

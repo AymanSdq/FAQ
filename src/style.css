@@ -24,3 +24,7 @@ p{
 .hideAnswer{
     display: none;
 }
+
+.ert{
+    transition: 1s;
+}
